@@ -53,6 +53,7 @@ function gameEngine() {
         snakeArr = [{x:13, y:15}];
         musicSound.play();
         score = 0;
+        document.getElementById('score').innerHTML = `Score : ${score}`;
     }
 
     // If you have eaten the food, increment the score and regenerate the food
@@ -109,7 +110,9 @@ function gameEngine() {
 
 window.requestAnimationFrame(main);
 
+
 window.addEventListener('keydown', (e)=>{
+    musicSound.play();
     //Start the game
     inputDirection = {x:0, y:1};
     moveSound.play();
